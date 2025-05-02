@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的世界迷宫生成器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <input type="number" id="rows" placeholder="行数" min="5" max="50" value="15">
+            <input type="number" id="cols" placeholder="列数" min="5" max="50" value="15">
+            <div class="control-group">
+              <label>入口数量：<input type="number" id="entranceCount" value="1" min="1" style="width: 60px"></label>
+              <label>出口数量：<input type="number" id="exitCount" value="1" min="1" style="width: 60px"></label>
+              <label><input type="checkbox" id="showPortals" checked> 显示出入口</label>
+            </div>
+            
+            <div class="control-group">
+              <button onclick="generateMaze()">生成迷宫</button>
+            </div>
+        </div>
+        <canvas id="mazeCanvas"></canvas>
+    </div>
+    <script src="maze.js"></script>
+</body>
+</html>
